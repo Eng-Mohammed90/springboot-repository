@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.abed</groupId>
-	<artifactId>springbootapp</artifactId>
+	<artifactId>Students-System</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springbootapp</name>
+	<name>Students-System</name>
 	<description>First project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -67,5 +67,3 @@
 	</build>
 
 </project>
-
-
