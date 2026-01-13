@@ -1,0 +1,46 @@
+Deployment Notes – Assignment 3
+
+Project Overview:
+- Backend Framework: Java Spring Boot
+- Database: MySQL
+- Containerization: Docker
+- Deployment Platform: Railway
+- Source Code: https://github.com/Eng-Mohammed90/Students-System.git
+
+This assignment focuses on deploying the project to a production environment.
+Compared to Assignment #2, the Docker image was improved and successfully connected to the database.
+
+---
+
+Challenges Faced
+
+1. Database Connection Failure in Previous Docker Image
+In Assignment #2, the Docker image was incomplete and failed to establish a connection with the MySQL database.
+This caused the application to fail at runtime.
+
+Solution
+The Docker configuration was reviewed and corrected.
+The application was rebuilt using a proper Dockerfile and correct database dependencies, resulting in a working container that successfully connects to MySQL.
+
+----------------------------------------------------
+2. Connecting MySQL Database on Railway
+One of the main challenges was linking the MySQL database service provided by Railway with the Spring Boot application.
+Initially, the application failed to connect due to incorrect database host, port, and credentials.
+
+**Solution:**
+- Created a MySQL service on Railway.
+- Retrieved database connection details from the Railway dashboard.
+- Configured the following environment variables in Railway:
+  - `SPRING_DATASOURCE_URL`
+  - `SPRING_DATASOURCE_USERNAME`
+  - `SPRING_DATASOURCE_PASSWORD`
+- Updated the application to read database configuration from environment variables instead of hardcoded values.
+
+----------------------------------------------------
+3. Environment Variables Configuration
+The application was initially using `application.properties` with fixed values, which did not work in production.
+
+Solution:
+Modified the configuration to use environment variables, allowing the application to run correctly in the Railway production environment.
+
+---
